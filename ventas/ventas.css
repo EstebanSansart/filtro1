@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
+
+/* NAV Y SIDEBAR */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    overflow: hidden;
+    font-weight: 300;
+    background-image: url(../img/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu a{
+    text-decoration: none;
+    margin: 50px;
+}
+
+.bg-primary{
+    background-color: #11134B !important;
+}
+
+#sidebar-container{
+    min-height: 100vh;
+}
+
+#sidebar-container .logo{
+    padding: .875rem 1.25rem;
+}
+
+#logoCampus{
+    width: 250px;
+}
+
+#sidebar-container .menu{
+    margin-top: 50%;
+    width: 18rem;
+}
+
+.navbar{
+    background-color: #333675 !important;
+}
+
+#spann{
+    background-color: #0b0c30;
+    padding: 10px;
+}
+
+.sells{
+    height: 150px;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+button{
+    margin-right: 15px
+}
+
+.table{
+    position: absolute;
+    width: 70%;
+    top: 350px;
+    left: 400px;
+}
+
+.table thead{
+    background-color: #EEC90E;
+}

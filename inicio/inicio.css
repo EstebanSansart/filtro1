@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +13,7 @@ body{
 }
 
 .col-4{
+    font-family: 'Noto Sans', sans-serif;
     position: absolute;
     top: 35%;
     left: 10%;
@@ -29,6 +32,19 @@ body{
     font-size: 400%;
 }
 
+.navbar{
+    font-family: 'Noto Sans', sans-serif;
+}
+
 #astronaut{
-    width: 250px;
+    position: absolute;
+    right: 20%;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    transition: all 0.5s ease;
+}
+
+#astronaut:hover{
+    transform: scale(0.8);
 }
