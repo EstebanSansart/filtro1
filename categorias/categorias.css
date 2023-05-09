@@ -36,6 +36,11 @@ body{
 
 #logoCampus{
     width: 250px;
+    transition: all 0.5s ease;
+}
+
+#logoCampus:hover{
+    transform: rotate(360);
 }
 
 #sidebar-container .menu{
