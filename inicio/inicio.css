@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col-4{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.col-4 h3{
+    color: #EEC90E;
+}
+
+.col-4 h1{
+    color: white;
+    font-size: 400%;
+}
+
+#astronaut{
+    width: 250px;
+}
