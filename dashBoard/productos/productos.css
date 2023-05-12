@@ -12,7 +12,7 @@ body{
     font-family: 'Noto Sans', sans-serif;
     overflow: hidden;
     font-weight: 300;
-    background-image: url(../img/background2.png);
+    background-image: url(../../img/background2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -36,11 +36,6 @@ body{
 
 #logoCampus{
     width: 250px;
-    transition: all 0.5s ease;
-}
-
-#logoCampus:hover{
-    transform: rotate(360);
 }
 
 #sidebar-container .menu{
@@ -57,7 +52,7 @@ body{
     padding: 10px;
 }
 
-.categories{
+.products{
     height: 150px;
     position: absolute;
     top: 200px;
@@ -79,5 +74,5 @@ button{
 }
 
 .table thead{
-    background-color: #EEC90E;
+    background-color: #c73434;
 }

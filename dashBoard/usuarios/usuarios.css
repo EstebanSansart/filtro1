@@ -12,7 +12,7 @@ body{
     font-family: 'Noto Sans', sans-serif;
     overflow: hidden;
     font-weight: 300;
-    background-image: url(../img/background2.png);
+    background-image: url(../../img/background2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -52,7 +52,7 @@ body{
     padding: 10px;
 }
 
-.buy{
+.users{
     height: 150px;
     position: absolute;
     top: 200px;
@@ -74,5 +74,5 @@ button{
 }
 
 .table thead{
-    background-color: #c73434;
+    background-color: #3caf31;
 }
