@@ -1,5 +1,5 @@
 {
-  "usuarios": [
+  "usuarios" : [
     {
       "nombre": "Julian",
       "usuario": "estebansansar",
@@ -41,6 +41,98 @@
       "pass": "789",
       "email": "julianestebansanabria@gmail.com",
       "id": 6
+    },
+    {
+      "nombre": "Sicer",
+      "usuario": "sicerrr",
+      "pass": "123",
+      "email": "sicer@gmail.com",
+      "id": 7
+    },
+    {
+      "nombre": "Karen",
+      "usuario": "xddddddd",
+      "pass": "aaa",
+      "email": "karen@gmail.com",
+      "id": 8
     }
+  ],
+  "categorias" : [
+    {
+      "nombre" : "Electrodomésticos",
+      "id" : 1
+    },
+    {
+      "nombre" : "Cafetería",
+      "id" : 2
+    },
+    {
+      "nombre" : "Juegos",
+      "id" : 3
+    },
+    {
+      "nombre" : "Ropa Femenina",
+      "id" : 4
+    },
+    {
+      "nombre" : "Ropa Infantil",
+      "id" : 5
+    },
+    {
+      "nombre" : "Ferretería",
+      "id" : 6
+    }
+  ],
+  "productos" : [
+    {
+      "nombre" : "Gaseosas",
+      "precio" : "5000",
+      "stock" : "30",
+      "categoria" : "Cafetería",
+      "id" : 1
+    },
+    {
+      "nombre" : "Televisor",
+      "precio" : "2000000",
+      "stock" : "2",
+      "categoria" : "Electrodomésticos",
+      "id" : 2
+    },
+    {
+      "nombre" : "Martillo",
+      "precio" : "5000",
+      "stock" : "3",
+      "categoria" : "Ferretería",
+      "id" : 3
+    }
+  ],
+  "clientes" : [
+    {
+      "nombre" : "Juan Pablo Angarita",
+      "id" : 1
+    },
+    {
+      "nombre" : "Diana Marcela Sarmiento",
+      "id" : 2
+    }
+  ],
+  "ventas" : [
+    {
+      "nombre" : "Diana Marcela Sarmiento",
+      "empleado" : "Jose Damián Angeles",
+      "fecha" : "2023-05-09",
+      "productos" : "Gaseosas",
+      "cantidad" : "14",
+      "id" : 1
+    }
+  ],
+  "compras" : [
+    {
+      "compra" : "#01",
+      "id" : 1
+    }
+  ],
+  "reportes" : [
+    
   ]
 }
