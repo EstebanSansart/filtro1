@@ -1,3 +1,39 @@
 {
-    "usuarios": []
+  "usuarios": [
+    {
+      "nombre": "Julian",
+      "usuario": "estebansansar",
+      "pass": "123456",
+      "email": "sansar@campus.com",
+      "id": 1
+    },
+    {
+      "nombre": "Miguel",
+      "usuario": "josem",
+      "pass": "316316",
+      "email": "miguel@sexo.com",
+      "id": 2
+    },
+    {
+      "nombre": "David",
+      "usuario": "learts",
+      "pass": "333444",
+      "email": "juan@pobrezaextrema.com",
+      "id": 3
+    },
+    {
+      "nombre": "Yooo",
+      "usuario": "nan",
+      "pass": "nunu",
+      "email": "zzz@gmail.com",
+      "id": 4
+    },
+    {
+      "nombre": "zharick",
+      "usuario": "cualsea",
+      "pass": "sisisi",
+      "email": "nonono@gmail.com",
+      "id": 5
+    }
+  ]
 }

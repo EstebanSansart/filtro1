@@ -1,46 +1,46 @@
-/* url */
-const url = 'http://localhost:4001'
-let config = {/* methods */
-  headers:new Headers({
-      "Content-Type": "application/json"
-  }), 
-};
-/* REGISTER */
-const registerForm = document.querySelector('#register')
-/* login */
-const login = document.querySelector('#userver')
+let myForm = document.querySelector('#myForm');
 
-/* post */
-const postUser = async(e)=> {
-  e.preventDefault()
-  let data = Object.fromEntries(new FormData(e.target))
-  config.method = "POST"
-  config.body = JSON.stringify(data)
-  let ans = await fetch(`${url}/usuarios`, config)
-  console.log(ans)
+const form = document.querySelector('#form');
+
+const get_data = () => {
+    const datos = new FormData(form);
+    const proceso = Object.fromEntries(datos.entries());
+    form.reset();
+    return proceso;
 }
-/* verify */
-const verify = async(e)=> {
-e.preventDefault()
-let data = Object.fromEntries(new FormData(e.target))
-let userVer = await fetch(`${url}/usuarios`) 
-let verify = await userVer.json()
-if (verify == false){
-  alert('no hay datos')
-}else{
-  let token = false
-  verify.forEach((log) => {
-    if (data.userVer == log.userName && data.passVer == log.password) {
-      token = true
+
+const post = async () => {
+    const newuser = get_data();
+
+    try {
+        const response = await fetch('http://localhost:3000/usuarios', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newuser)
+        });
+        
+        if (response.ok) {
+            const responsejson = await response.json();
+            const {nombre, usuario, pass} = responsejson;
+        }
+    } catch (error) {
+        console.log(error);
     }
-  });
-  if (token == true) {
-    window.location.href = '../dashBoard/categorias/categorias.html'
-  }else{
-    alert('usuario o contraseña incorrecta')
-  }
-} 
-
 }
-login.addEventListener('submit', verify);
-registerForm.addEventListener('submit', postUser)
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    post();
+});
+
+
+const myfun = async (e)=>{
+  e.preventDefault();
+  let data = Object.fromEntries(new FormData(e.target));
+  let res = await (await fetch(`http://localhost:3000/usuarios?usuario=${data.user}&pass=${data.pass}`)).json();
+  let mensaje = (res.length) ? window.location.href = "../dashBoard/categorias/categorias.html" : alert("el usuario no existe");
+  
+  console.log(mensaje);
+}
+
+myForm.addEventListener('submit', myfun);

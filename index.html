@@ -8,12 +8,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" href="../img/favicon3.png">
-    <script src="./js/login.js" defer></script>
+    <script src="js/login.js" defer></script>
     <title>CAMPUS 2.0</title>
 </head>
 <body>
     <nav class="navbar bg-transparent">
-        <form class="container-fluid justify-content-start">
+        <form id="myForm" class="container-fluid justify-content-start">
             <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">Iniciar Sesión</button>
             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -23,17 +23,15 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form id="userver">
-                                <div class="mb-3">
-                                    <label for="exampleInputUser" class="form-label">Usuario</label>
-                                    <input type="user" class="form-control" id="exampleInputUser">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
-                                </div>
-                                <button class="btn btn-warning" type="submit">Iniciar</button>
-                            </form>
+                            <div class="mb-3">
+                                <label for="exampleInputUser" class="form-label">Usuario</label>
+                                <input type="user" class="form-control" name="user" id="exampleInputUser">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" name="pass" id="exampleInputPassword1">
+                            </div>
+                            <button class="btn btn-warning" type="submit">Iniciar</button>
                         </div>
                     </div>
                 </div>
@@ -54,18 +52,18 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form id="register">
+                                <form id="form">
                                     <div class="mb-3">
-                                        <input type="text" class="form-control" id="nombreInput" placeholder="Nombre">
+                                        <input type="text" class="form-control" id="nombreInput" name="nombre" placeholder="Nombre">
                                     </div>
                                     <div class="col-6 mb-3">
-                                        <input type="text" class="form-control" id="usuarioInput" placeholder="Usuario" aria-label="Usuario">
+                                        <input type="text" class="form-control" id="usuarioInput" name="usuario" placeholder="Usuario" aria-label="Usuario">
                                     </div>
                                     <div class="col-6 mb-3">
-                                        <input type="password" placeholder="Contraseña" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                                        <input type="password" placeholder="Contraseña" id="inputPassword5" name="pass" class="form-control" aria-describedby="passwordHelpBlock">
                                     </div>
                                     <div class="col-12 mb-3">
-                                        <input type="text" class="form-control" id="emailInput" placeholder="Email">
+                                        <input type="text" class="form-control" id="emailInput" name="email" placeholder="Email">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
