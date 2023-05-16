@@ -1,26 +1,46 @@
-import {getUser} from "../apiConnection/api.js";
-const formularioSesion = document.querySelector('#formularioSesion');
-formularioSesion.addEventListener('click', validateLogin);
+/* url */
+const url = 'http://localhost:4001'
+let config = {/* methods */
+  headers:new Headers({
+      "Content-Type": "application/json"
+  }), 
+};
+/* REGISTER */
+const registerForm = document.querySelector('#register')
+/* login */
+const login = document.querySelector('#userver')
 
-function validateLogin(e){
-    e.preventDefault();
-    const user = document.querySelector('#inputUser').value;
-    const password = document.querySelector('#inputPassword').value;
-
-    const sesionado = {
-        user,
-        password
-    }
-    buscador(sesionado)
+/* post */
+const postUser = async(e)=> {
+  e.preventDefault()
+  let data = Object.fromEntries(new FormData(e.target))
+  config.method = "POST"
+  config.body = JSON.stringify(data)
+  let ans = await fetch(`${url}/usuarios`, config)
+  console.log(ans)
 }
-
-async function buscador(sesionado){
-    if (sesionado.user && sesionado.password){
-        const usuarios = await getUsers();
-        usuarios.forEach(element => {
-            if (element.user === sesionado.user && element.password === sesionado.password){
-                window.location.href = '../index.html';
-            }
-        });
+/* verify */
+const verify = async(e)=> {
+e.preventDefault()
+let data = Object.fromEntries(new FormData(e.target))
+let userVer = await fetch(`${url}/usuarios`) 
+let verify = await userVer.json()
+if (verify == false){
+  alert('no hay datos')
+}else{
+  let token = false
+  verify.forEach((log) => {
+    if (data.userVer == log.userName && data.passVer == log.password) {
+      token = true
     }
+  });
+  if (token == true) {
+    window.location.href = '../dashBoard/categorias/categorias.html'
+  }else{
+    alert('usuario o contraseña incorrecta')
+  }
+} 
+
 }
+login.addEventListener('submit', verify);
+registerForm.addEventListener('submit', postUser)
