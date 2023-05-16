@@ -34,6 +34,13 @@
       "pass": "sisisi",
       "email": "nonono@gmail.com",
       "id": 5
+    },
+    {
+      "nombre": "Nicolas",
+      "usuario": "aaaaaaa",
+      "pass": "789",
+      "email": "julianestebansanabria@gmail.com",
+      "id": 6
     }
   ]
 }
